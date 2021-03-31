@@ -1,9 +1,10 @@
 # =fargater=
-Run batch/migration jobs in your VPC using Fargate
+🚀 Run batch/migration jobs in your VPC using Fargate
 
 ## Motivation
 Many a times we need to run some kind of a remote job in our VPC, e.g. a batch job or a database migration script. 
-The problem is your CI/CD pipeline is perhaps executed in another cloud or AWS account and you don't want to bother with exposing your RDS instance to the public or run CI workers in your VPC (Bitbucket Pipelines does not even have this option).
+The problem is your CI/CD pipeline is perhaps executed in another cloud or AWS account and you don't want to bother with exposing your RDS instance to the public or run CI workers inside your VPC (Bitbucket Pipelines does not even have this option).
+
 There are 2 ways how you can achieve this:
 * AWS Lambda
 * AWS ECS (Fargate)
@@ -22,9 +23,9 @@ $ ./run-ecs-task.sh
 ```
 
 Terraform will create the necessary infrastructure: VPC, Subnets, Internet and NAT GWs, ECR repo, Fargate cluster, IAM roles/policies, etc. And the following files:
-1. ``overrides.json`` (here you can override the command Docker will execute when the container is started)
-1. ``publish-docker-image.sh`` (builds and publishes your Docker image to ECR)
-3. ``run-ecs-task.sh`` (runs the ecs task on Fargate and displays the output)
+1. ``overrides.json`` (here you can override the ``command`` Docker will execute when your container is started)
+1. ``publish-docker-image.sh`` (will build and publish your Docker image to ECR)
+3. ``run-ecs-task.sh`` (will run an ECS task on Fargate and display the output)
 
 ```
 $ ./run-ecs-task.sh
