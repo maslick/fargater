@@ -23,7 +23,7 @@ $ ./run-ecs-task.sh
 ```
 
 Terraform will create the necessary infrastructure: VPC, Subnets, Internet and NAT GWs, ECR repo, Fargate cluster, IAM roles/policies, etc. And the following files:
-1. ``overrides.json`` (here you can override the ``command`` Docker will execute when your container is started)
+1. ``overrides.json`` (here you can override the ``command`` when your container is started)
 1. ``publish-docker-image.sh`` (will build and publish your Docker image to ECR)
 3. ``run-ecs-task.sh`` (will run an ECS task on Fargate and display the output)
 
