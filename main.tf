@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "terraform-maslick"
+    key = "fargater.state"
+    region = "eu-central-1"
+  }
+}
+
 provider "aws" {
   region = var.region
 }
@@ -186,9 +194,9 @@ resource "aws_iam_role_policy_attachment" "fargate_ecr_attach" {
   policy_arn = aws_iam_policy.ecr_image_pull.arn
 }
 
-##########################################
-# Allow Fargate to publish to logs
-##########################################
+##############################################
+# Allow Fargate to publish logs to Cloudwatch
+##############################################
 resource "aws_cloudwatch_log_group" "fargate" {
   name = "/ecs/${var.app_name}-${var.env}"
 }
