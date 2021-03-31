@@ -1,5 +1,5 @@
 # =fargater=
-Run batch/migration jobs in your VPC using Fargate
+🚀 Run batch/migration jobs in your VPC using Fargate
 
 ## Motivation
 Many a times we need to run some kind of a remote job in our VPC, e.g. a batch job or a database migration script. 
@@ -25,7 +25,7 @@ $ ./run-ecs-task.sh
 Terraform will create the necessary infrastructure: VPC, Subnets, Internet and NAT GWs, ECR repo, Fargate cluster, IAM roles/policies, etc. And the following files:
 1. ``overrides.json`` (here you can override the ``command`` Docker will execute when your container is started)
 1. ``publish-docker-image.sh`` (will build and publish your Docker image to ECR)
-3. ``run-ecs-task.sh`` (will run an ECS task on Fargate and displays the output)
+3. ``run-ecs-task.sh`` (will run an ECS task on Fargate and display the output)
 
 ```
 $ ./run-ecs-task.sh
