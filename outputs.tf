@@ -22,12 +22,12 @@ output "ecr_image" {
 
 resource "local_file" "overrides" {
   filename = "overrides.json"
-  file_permission = "0755"
+  file_permission = "0644"
   content = <<-EOT
 {
   "containerOverrides": [{
     "name": "${var.app_name}-${var.env}-container",
-    "command": ["pwd"]
+    "command": ["ls", "-la", "/"]
   }]
 }
 EOT
@@ -65,6 +65,9 @@ fi
 
 docker tag tempimage $IMAGE_NAME
 docker push $IMAGE_NAME
+
+logger ""
+logger "OK"
 EOT
 }
 
@@ -109,6 +112,8 @@ log_group="${aws_cloudwatch_log_group.fargate.name}"
 log_stream="fargate/${var.app_name}-${var.env}-container/$TASK_ID"
 AWS_PAGER="" aws logs get-log-events --log-group-name "$log_group" --log-stream-name "$log_stream" --output text --query 'events[*].[message]'
 
+logger ""
+logger "OK"
 EOT
 }
 
