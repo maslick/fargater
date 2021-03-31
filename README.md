@@ -12,7 +12,7 @@ There are 2 ways how you can achieve this:
 If you are not keen on writing any Python code, perhaps you're a bash super hero, then why bother with AWS Lambda, right? AWS ECS to the rescue!
 
 ## Usage
-Prerequisites: Edit ``docker/Dockerfile`` according to your needs.
+Prerequisites: edit ``docker/Dockerfile`` according to your needs.
 
 ```bash
 $ terraform init
