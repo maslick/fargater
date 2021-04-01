@@ -20,9 +20,5 @@ variable "environment" {
 }
 
 variable "command" {
-  default = [
-    "ls",
-    "-la",
-    "/"
-  ]
+  default = ["ls", "-la", "/"]
 }

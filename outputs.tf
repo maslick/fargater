@@ -27,7 +27,7 @@ resource "local_file" "overrides" {
 {
   "containerOverrides": [{
     "name": "${var.app_name}-${var.env}-container",
-    "command": ["ls", "-la", "/"]
+    "command": ["./run.sh"]
   }]
 }
 EOT
