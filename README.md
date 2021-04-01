@@ -9,7 +9,7 @@ There are 2 ways how you can achieve this:
 * AWS Lambda
 * AWS ECS (Fargate)
 
-If you are not keen on writing any Python code, perhaps you're a bash super hero, then why bother with AWS Lambda, right? AWS ECS to the rescue!
+If you are not keen on writing any Python code, perhaps you're a bash superhero, then why bother with AWS Lambda, right? AWS ECS to the rescue!
 
 ## Usage
 Prerequisites: edit ``docker/run.sh`` according to your needs
