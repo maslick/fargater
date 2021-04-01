@@ -38,27 +38,24 @@ Wed Mar 31 10:56:38 UTC 2021 	 Waiting until the task is complete...
 Wed Mar 31 10:57:36 UTC 2021 	 ##################################
 Wed Mar 31 10:57:36 UTC 2021 	 # Display container logs
 Wed Mar 31 10:57:36 UTC 2021 	 ##################################
-total 68
-drwxr-xr-x    1 root     root          4096 Mar 31 10:56 .
-drwxr-xr-x    1 root     root          4096 Mar 31 10:56 ..
-drwxr-xr-x    2 root     root          4096 Mar 30 10:51 app
-drwxr-xr-x    1 root     root          4096 Mar 30 10:51 bin
-drwxr-xr-x    5 root     root           340 Mar 31 10:56 dev
-drwxr-xr-x    1 root     root          4096 Mar 31 10:56 etc
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 home
-drwxr-xr-x    1 root     root          4096 Mar 25 16:57 lib
-drwxr-xr-x    5 root     root          4096 Mar 25 16:57 media
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 mnt
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 opt
-dr-xr-xr-x  103 root     root             0 Mar 31 10:56 proc
-drwx------    2 root     root          4096 Mar 25 16:57 root
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 run
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 sbin
-drwxr-xr-x    2 root     root          4096 Mar 25 16:57 srv
-dr-xr-xr-x   13 root     root             0 Mar 31 10:56 sys
-drwxrwxrwt    2 root     root          4096 Mar 25 16:57 tmp
-drwxr-xr-x    1 root     root          4096 Mar 25 16:57 usr
-drwxr-xr-x    1 root     root          4096 Mar 25 16:57 var
+AWS_EXECUTION_ENV=AWS_ECS_FARGATE
+AWS_CONTAINER_CREDENTIALS_RELATIVE_URI=/v2/credentials/9db34f47-2a1b-4ce0-bcb5-91b765b65139
+HOSTNAME=22dbe105954f4e2b88815630bc71e275-71576537
+AWS_DEFAULT_REGION=eu-central-1
+AWS_REGION=eu-central-1
+PWD=/app
+ECS_CONTAINER_METADATA_URI_V4=http://169.254.170.2/v4/22dbe105954f4e2b88815630bc71e275-71576537
+FOO=BAR
+HOME=/root
+ECS_CONTAINER_METADATA_URI=http://169.254.170.2/v3/22dbe105954f4e2b88815630bc71e275-71576537
+SHLVL=1
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+_=/usr/bin/env
+/app
+total 12
+drwxr-xr-x    1 root     root          4096 Apr  1 09:49 .
+drwxr-xr-x    1 root     root          4096 Apr  1 09:49 ..
+-rwxr-xr-x    1 root     root            27 Apr  1 09:46 run.sh
 Wed Mar 31 10:57:36 UTC 2021
 Wed Mar 31 10:57:36 UTC 2021 	 OK
 ```
