@@ -122,7 +122,7 @@ locals {
 
 resource "aws_security_group" "fargate_ecs" {
   name        = "${var.app_name}-${var.env}"
-  description = "allow egress only"
+  description = "allow outbound connections only"
   vpc_id      = module.vpc.vpc_id
 
   egress {
