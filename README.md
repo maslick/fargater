@@ -2,7 +2,7 @@
 🚀 Run batch/migration jobs in your VPC using Fargate
 
 ## Motivation
-Many a times we need to run some kind of a remote job in our VPC, e.g. a batch job or a database migration script. 
+Many a times we need to run some kind of remote job in our VPC, e.g. a batch job or a database migration script. 
 The problem is your CI/CD pipeline is perhaps executed in another cloud or AWS account and you don't want to bother with exposing your RDS instance to the public or run CI workers inside your VPC (Bitbucket Pipelines does not even have this option).
 
 There are 2 ways how you can achieve this:
